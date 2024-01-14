@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #222;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #222;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/*  ------------- Header  -------------  */
+header .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    background-color: #222;
+}
+header .logo img{
+    width: 200px;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+header li{
+    list-style: none;
+    font-size: 20px;
+}
+
+header li a{
+    color: #222;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+#logo{
+    background-color: transparent;
+}
+
+header li a:hover{
+    opacity: 0.8;
+}
+
+
+
+/*  ------------- Pokemon  -------------  */
+
+
+.pokemon-wrapper, .cart-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.pokemon-card{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.pokemon-card h3{
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.pokemon-card img{
+    width: 200px;
+}
+
+a{
+    margin-top: 20px;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.pokemon-card a:hover,
+.addButton:hover{
+    opacity: 0.8;
+}
+
+/*  ------------- Other  -------------  */
+
+.see-more{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+
+/*  ------------- Product page  -------------  */
+
+.product-page{
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.product-page .img{
+    width: 50%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-page .img img{
+    width: 400px;
+}
+
+.product-page .pokemon-info{
+    width: 50%;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+
+
+.product-page .wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.pokemon-types{
+    display: flex;
+    gap: 20px;
+}
+
+.pokemon-info h1{
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+.pokemon-types img{
+    width: 50px;
+    height: 50px;
+}   
+
+.pokemon-stats div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-page a{
+    display: block;
+}
+
+/*  ------------- Responsive design  -------------  */
+
+@media screen and (max-width: 1380px){
+    .pokemon-wrapper, .cart-wrapper{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .container {
+        max-width: 900px;
+    }
+}
+@media screen and (max-width: 1000px){
+    .pokemon-wrapper, .cart-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .container {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .product-page{
+        display: flex;
+        flex-direction: column;
+    }
+    .product-page .img{
+        width: 100%; 
+    }
+    .product-page .pokemon-info{
+        width: 100%;
+    }
+    .product-page .wrapper{
+        margin: 10px 0;
+    }
+}
+@media screen and (max-width: 800px){
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    header .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 220px;
+        padding-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .pokemon-wrapper, .cart-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
