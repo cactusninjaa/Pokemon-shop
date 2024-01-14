@@ -1,11 +1,8 @@
-// import "script.js"
-
 document.addEventListener("DOMContentLoaded", () => {
     //Elements
     const container = document.querySelector('.product-page')
     const urlParams = new URLSearchParams(window.location.search);
     const pokemonId = urlParams.get('id');
-    const cartPokemons = []
 
     const pokemonColours = {
         normal: '#A8A77A',
@@ -44,9 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
             container.querySelector('.pokemon-types').appendChild(pokemonTypeImg)
             console.log(type)
             pokemonTypeImg.src = `src/type/${type.type.name}.png`
-
-            // const img = document.querySelector('.img')            
-            // img.style.backgroundColor = pokemonColours[type.type.name]
         })
     }
 
